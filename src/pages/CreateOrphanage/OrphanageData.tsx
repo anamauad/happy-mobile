@@ -66,7 +66,7 @@ export default function OrphanageData() {
     const { status } = await ImagePicker.requestCameraRollPermissionsAsync();
 
     if (status !== 'granted') {
-      alert('Eita precisamos de acesso às suas fotos...')
+      alert('Eita precisamos de acesso às suas fotos...');
       return;
     }
 
@@ -112,11 +112,11 @@ export default function OrphanageData() {
               source={{ uri: image }}
               style={styles.uploadedImage}
             />
-          )
+          );
         })}
       </View>
 
-      <TouchableOpacity style={styles.imagesInput} onPress={() => {}}>
+      <TouchableOpacity style={styles.imagesInput} onPress={handleSelectImages}>
         <Feather name="plus" size={24} color="#15B6D6" />
       </TouchableOpacity>
 
